@@ -8,6 +8,6 @@ renderTool('logginPlantilla',[
 $error =[];
 if($_SERVER['REQUEST_METHOD'] == "POST"){
     $email = filter_input(INPUT_POST, "email", FILTER_SANITIZE_EMAIL);
-    $password = isset($_POST["password"]) ? sanitary($_POST["password"]) : 0;
+    $password = isset($_POST["password"]) ? $_POST["password"] : 0;
     logging($email, $password);
 }

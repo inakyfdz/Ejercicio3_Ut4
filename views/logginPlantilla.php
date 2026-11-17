@@ -12,5 +12,5 @@
 <?php if($error) :  renderErrors($error); endif; ?>
 
 <div>
-    <a href="/public"><button>Volver al index</button></a>
+    <a href="/index.php"><button>Volver al index</button></a>
 </div>

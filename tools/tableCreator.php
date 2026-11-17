@@ -12,7 +12,7 @@ function cabecera(array $datosTabla) {
     $text = '<thead>';
     foreach ($datosTabla as $key => $value) {
         $text .= "<th>$key</th>";
-        $text .= '<tr>';
+
     }
     $text .= '</thead>';
     return $text;
@@ -21,8 +21,8 @@ function cabecera(array $datosTabla) {
 function cuerpo(array $datosTabla) {
     $text = '<tbody>';
     foreach ($datosTabla as $key => $value) {
-        $text .= "<td>$key</td>";
-        $text .= '<tr>';
+        $text .= "<td>$value</td>";
+
     }
     $text .= '</tbody>';
     return $text;

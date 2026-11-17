@@ -1,13 +1,16 @@
 <?php
 
-function renderTool(string $sitio, array $datos )
+function renderTool(string $sitio, array $datos = null)
 {
     $plantilla = searchInViews($sitio);
     if ($plantilla == null){
         http_response_code(404);
         echo "<p> Error no se ha podido encontrar pagina </p>";
     }else{
-        extract($datos);
+        if($datos == null){
+            extract($datos);
+        }
+
         $raiz = dirname(__DIR__);
 
         require $raiz . '/views/common/header.php';

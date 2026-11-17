@@ -1,7 +1,7 @@
 <?php
 
 function getUsersInfo() :array {
-    return require __DIR__ . "/../data/user.php";
+    return require __DIR__ . "data/user.php";
 }
 
 function getUserInfoByEmail($email) :? array {
@@ -19,12 +19,13 @@ function logging ($email, $password) :void {
 
     if( $buscado == null || $buscado['password'] != $password) {
         $error[] = 'Error en la autentificacion';
-    }{
+    }else{
         session_start();
         $_SESSION['user'] = [
+            'id' => $buscado['id'],
             'name' => $buscado['name'],
             'email' => $buscado['email'],
-            'rol' => $buscado['rol']
+            'role' => $buscado['role']
 
         ];
         header('Location: /public/dashboard.php');
@@ -47,7 +48,7 @@ function currentUserRole() :?string {
     if($userAsig == null) {
         return null;
     }
-    return $userAsig['rol'];
+    return $userAsig['role'];
 }
 function logOut() :void {
     session_destroy();
