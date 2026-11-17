@@ -1,0 +1,8 @@
+{
+  "name": "ejercicio3/biblioteca",
+  "description": "Ejercicio3",
+  "version": "1.0.0",
+  "scripts": {
+    "server" : "php -S localhost:8000 -t public"
+  }
+}
