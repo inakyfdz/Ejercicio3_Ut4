@@ -1,7 +1,7 @@
 <?php
 
 function getUsersInfo() :array {
-    return require __DIR__ . "data/user.php";
+    return require __DIR__ . "/data/user.php";
 }
 
 function getUserInfoByEmail($email) :? array {
@@ -17,10 +17,10 @@ function getUserInfoByEmail($email) :? array {
 function logging ($email, $password) :void {
     $buscado =getUserInfoByEmail($email);
 
-    if( $buscado == null || $buscado['password'] != $password) {
+    if( $buscado == null || password_verify($buscado['password'], $password)) {
         $error[] = 'Error en la autentificacion';
     }else{
-        session_start();
+        session_regenerate_id(true);
         $_SESSION['user'] = [
             'id' => $buscado['id'],
             'name' => $buscado['name'],
@@ -51,6 +51,7 @@ function currentUserRole() :?string {
     return $userAsig['role'];
 }
 function logOut() :void {
+    setcookie(session_name(), '', time() - 3600);
     session_destroy();
     header('Location: /public/index.php');
 }
