@@ -7,7 +7,7 @@ function renderTool(string $sitio, array $datos = null)
         http_response_code(404);
         echo "<p> Error no se ha podido encontrar pagina </p>";
     }else{
-        if($datos == null){
+        if($datos != null){
             extract($datos);
         }
 

@@ -6,7 +6,7 @@ return [
         "id" => 1,
         "name" => "John Doe",
         "email" => "johnDoe@gmail.com",
-        "password" => '$2y$12$psU3G3IcmmMeuyMobsOwFeBMpF12V0RE8VcfM9ZK1Vvx/7FZo.ohK',
+        "password" => '$2y$12$vWZ6E5ciBb3N64pQZQU76O74zKpEERXH8Xnd77paUTAgixV0Q0vPy',
         "role" => "admin"
     ],
     //1234Patata
@@ -14,7 +14,7 @@ return [
         "id" => 2,
         "name" => "Jane Doe",
         "email" => "janeDoe@gmail.com",
-        "password" => '$2y$12$AWLurDxpQ7Pn5aEa.O5bFOvluipEO.scQ0.wvIxL0uVTiAA64IlL.',
+        "password" => '$2y$12$gRdqrjP4xhNjQ9D0jnn.N.bTAzXjxlzUFUWkQLHeQq6E0RsfSv9Ci',
         "role" => "usser"
     ]
 ];

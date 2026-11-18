@@ -1,7 +1,7 @@
 <?php
 require_once __DIR__ . "/../app/bootstrap.php";
 
-renderTool('logginPlantilla',[
+renderTool('loginPlantilla',[
     "titulo" => "loggin",
     "cabecera1" => "Bienvenido identificate guardador",
     ]);
