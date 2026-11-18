@@ -1,7 +1,7 @@
 <?php
 
-function getUsersInfo() :array {
-    return require __DIR__ . "/data/user.php";
+function getUsersInfo(): array {
+    return require __DIR__ . "/../data/user.php";
 }
 
 function getUserInfoByEmail($email) :? array {
@@ -28,7 +28,7 @@ function logging ($email, $password) :void {
             'role' => $buscado['role']
 
         ];
-        header('Location: /public/dashboard.php');
+        header('Location: /dashboard.php');
     };
 
 }
