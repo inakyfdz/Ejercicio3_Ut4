@@ -17,7 +17,7 @@ function getUserInfoByEmail($email) :? array {
 function logging ($email, $password) :void {
     $buscado =getUserInfoByEmail($email);
 
-    if( $buscado == null || password_verify($buscado['password'], $password)) {
+    if( $buscado == null || !password_verify($password, $buscado['password'])) {
         $error[] = 'Error en la autentificacion';
     }else{
         session_regenerate_id(true);

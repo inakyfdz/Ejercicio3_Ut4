@@ -11,7 +11,6 @@ session_start();
 
 $_SESSION['visitas'] = ($_SESSION['visitas'] ?? 0) + 1;
 
-$error = [];
 function renderErrors(array $error) {
 
     foreach ($error as $e) {
