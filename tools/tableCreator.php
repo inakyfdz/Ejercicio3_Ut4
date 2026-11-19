@@ -1,6 +1,6 @@
 <?php
 function cogerDatos (){
-    require_once __DIR__ . "/../data/datosTabla.php";
+    return require_once __DIR__ . "/../data/datosTabla.php";
 }
 function crearTabla() {
     $datosTabla = cogerDatos();
@@ -25,9 +25,11 @@ function cabecera(array $datosTabla) {
 function cuerpo(array $datosTabla) {
     $text = '<tbody>';
     foreach ($datosTabla as $libros ) {
-        foreach ($libros as $libros => $valor ) {
+        $text .= '<tr>';
+        foreach ($libros as $libro => $valor ) {
             $text .= "<td>$valor</td>";
         }
+        $text .= '</tr>';
     }
     $text .= '</tbody>';
     return $text;

@@ -7,6 +7,6 @@
 <br>
 <a href="../public/index.php"> <button>Indice</button></a>
 <br><br>
-<a href="../public/logOut.php"> <button>Cerrar sesion</button></a>
+<a href="/logOut.php"> <button>Cerrar sesion</button></a>
 
 

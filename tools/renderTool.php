@@ -1,15 +1,20 @@
 <?php
 
-function renderTool(string $sitio, ?array $datos = null)
+function renderTool(string $sitio, array $datos )
 {
     $plantilla = searchInViews($sitio);
     if ($plantilla == null){
         http_response_code(404);
         echo "<p> Error no se ha podido encontrar pagina </p>";
     }else{
-        if($datos != null){
-            extract($datos);
+        if($datos == null){
+            $datos = [
+                'titulo' => 'Biblioteca',
+                'cabecera1' => '',
+                'pie1' => ''
+            ];
         }
+        extract($datos);
 
         $raiz = dirname(__DIR__);
 
