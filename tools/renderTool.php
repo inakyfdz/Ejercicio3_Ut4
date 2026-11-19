@@ -1,6 +1,6 @@
 <?php
 
-function renderTool(string $sitio, array $datos = null)
+function renderTool(string $sitio, ?array $datos = null)
 {
     $plantilla = searchInViews($sitio);
     if ($plantilla == null){
