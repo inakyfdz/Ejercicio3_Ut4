@@ -13,6 +13,7 @@
     <a> ID de usuario, su rol, email y nombre como forma "publica" que estara en el localStorage o una SessionStorage</a>
 </div>
 <br>
+<br>
 <a href="../public/index.php"> <button>Indice</button></a>
 <br><br>
-<a href="../public/index.php"> <button>Cerrar sesion</button></a>
+<a href="../public/logOut.php"> <button>Cerrar sesion</button></a>
