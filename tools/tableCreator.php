@@ -1,6 +1,9 @@
 <?php
-
-function crearTabla(array $datosTabla) {
+function cogerDatos (){
+    require_once __DIR__ . "/../data/datosTabla.php";
+}
+function crearTabla() {
+    $datosTabla = cogerDatos();
     $text = '<table>';
     $text .= cabecera($datosTabla);
     $text .= cuerpo($datosTabla);
