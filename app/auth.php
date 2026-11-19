@@ -29,6 +29,7 @@ function logging ($email, $password) :void {
 
         ];
         header('Location: /dashboard.php');
+        exit;
     };
 
 }
@@ -54,4 +55,5 @@ function logOut() :void {
     setcookie(session_name(), '', time() - 3600);
     session_destroy();
     header('Location: /public/index.php');
+    exit;
 }
