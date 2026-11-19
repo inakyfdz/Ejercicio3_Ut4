@@ -1,7 +1,7 @@
 
-<di>
+<div>
     <?= crearTabla() ?>
-</di>
+</div>
 
 
 <br>

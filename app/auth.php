@@ -18,7 +18,7 @@ function logging ($email, $password) :void {
     $buscado =getUserInfoByEmail($email);
 
     if( $buscado == null || !password_verify($password, $buscado['password'])) {
-        $error[] = 'Error en la autentificacion';
+        echo '<p> Error en la autentificacion </p>';
     }else{
         session_regenerate_id(true);
         $_SESSION['user'] = [
@@ -54,6 +54,6 @@ function currentUserRole() :?string {
 function logOut() :void {
     setcookie(session_name(), '', time() - 3600);
     session_destroy();
-    header('Location: /public/index.php');
+    header('Location: /index.php');
     exit;
 }

@@ -12,9 +12,10 @@ function crearTabla() {
 }
 
 function cabecera(array $datosTabla) {
+    $libros = $datosTabla[0];
     $text = '<thead>';
-    foreach ($datosTabla as $key => $value) {
-        $text .= "<th>$key</th>";
+    foreach ($libros as $parte => $valor) {
+        $text .= '<th> ' . $parte . ' </th>';
 
     }
     $text .= '</thead>';
@@ -23,9 +24,10 @@ function cabecera(array $datosTabla) {
 
 function cuerpo(array $datosTabla) {
     $text = '<tbody>';
-    foreach ($datosTabla as $key => $value) {
-        $text .= "<td>$value</td>";
-
+    foreach ($datosTabla as $libros ) {
+        foreach ($libros as $libros => $valor ) {
+            $text .= "<td>$valor</td>";
+        }
     }
     $text .= '</tbody>';
     return $text;
